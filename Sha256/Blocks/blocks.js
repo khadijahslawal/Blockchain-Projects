@@ -11,7 +11,7 @@ class Block {
     // Use this to create a temporary reference of the class object
     let self = this;
     //Implement your code here
-    const hash = SHA256(JSON.stringify(self.data));
+    const hash = SHA256(JSON.stringify(self));
     var promise = new Promise((resolve, reject) => {
         if (hash) {
             resolve({ hash: hash });
